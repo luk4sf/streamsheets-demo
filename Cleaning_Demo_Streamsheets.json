@@ -1,0 +1,2070 @@
+{
+  "version": 4,
+  "machines": [
+    {
+      "machine": {
+        "id": "ryfPhLOmyx",
+        "name": "Cleaning Demo",
+        "state": "stopped",
+        "metadata": {
+          "owner": "anon",
+          "lastModified": 1732974387447,
+          "lastModifiedBy": "unknown",
+          "fileVersion": "3.0.0"
+        },
+        "streamsheets": [
+          {
+            "id": "SJrD2IOXke",
+            "name": "Sheet1",
+            "loop": {
+              "path": "",
+              "enabled": false,
+              "recursively": false
+            },
+            "inbox": {
+              "max": 20,
+              "type": "MessageBox",
+              "id": "H1lrDhUum1x",
+              "stream": null
+            },
+            "sheet": {
+              "cells": {
+                "A3": {
+                  "value": "Publish an MQTT command to the device in question to scan for BLE devices:",
+                  "type": "string"
+                },
+                "A5": {
+                  "value": "Device ID:",
+                  "type": "string"
+                },
+                "B5": {
+                  "value": "58bf25044fe8",
+                  "type": "string"
+                },
+                "E5": {
+                  "value": "MQTT Data:",
+                  "type": "string"
+                },
+                "F5": {
+                  "value": "app",
+                  "type": "string"
+                },
+                "F6": {
+                  "value": "dev",
+                  "type": "string"
+                },
+                "A7": {
+                  "value": "MQTT Command:",
+                  "type": "string"
+                },
+                "C7": {
+                  "formula": "MQTT.PUBLISH(MQTT_Connection!,Sheet1!F5:G8,\"ife-int/device/msgs-down/58bf25044fe8\")",
+                  "value": true,
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "F7": {
+                  "value": "blescan",
+                  "type": "string"
+                },
+                "F8": {
+                  "value": "scanDurationSecs",
+                  "type": "string"
+                },
+                "G8": {
+                  "value": 6,
+                  "type": "number"
+                }
+              },
+              "namedCells": {},
+              "shapes": {
+                "shapes": [],
+                "timestamp": 0,
+                "version": 1,
+                "changed": 190020420797
+              },
+              "properties": {
+                "cols": [
+                  {
+                    "ref": {
+                      "col": "B"
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 2238.125,
+                        "visible": true
+                      }
+                    }
+                  }
+                ],
+                "rows": [],
+                "cells": [
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 3
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 24
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 5
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 5
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 6
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true,
+                        "level": 1
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 6
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 7
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true,
+                        "level": 2
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 7
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 8
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true,
+                        "level": 3
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 8
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "settings": {
+                "maxchars": 1000,
+                "minrow": 1,
+                "maxrow": 100,
+                "mincol": -2,
+                "maxcol": 50,
+                "protected": false
+              }
+            },
+            "trigger": {
+              "type": "interval",
+              "repeat": "once",
+              "interval": 5,
+              "intervalUnit": "s",
+              "useDefaultInterval": false
+            },
+            "settings": {
+              "maximize": false,
+              "showGrid": true,
+              "showHeader": true,
+              "showInbox": true,
+              "showFormulas": false,
+              "greyIfRows": true,
+              "hideMessages": false
+            },
+            "custom": {}
+          },
+          {
+            "id": "H1egaTIumJe",
+            "name": "Sheet2",
+            "loop": {
+              "path": "",
+              "enabled": false,
+              "recursively": false
+            },
+            "inbox": {
+              "max": 20,
+              "type": "Inbox",
+              "id": "Skbxa6UuX1x",
+              "stream": null
+            },
+            "sheet": {
+              "cells": {
+                "A3": {
+                  "value": "Main Logic",
+                  "type": "string"
+                },
+                "G3": {
+                  "value": "Logic - Beacon 10:",
+                  "type": "string"
+                },
+                "A4": {
+                  "value": "",
+                  "type": "string"
+                },
+                "A5": {
+                  "value": "Detect if device is close to the beacon:",
+                  "type": "string"
+                },
+                "G5": {
+                  "value": "Is the device in close proximity of the beacon:",
+                  "type": "string"
+                },
+                "H5": {
+                  "value": "",
+                  "type": "string"
+                },
+                "K5": {
+                  "formula": "IF(Sheet2!B8>=-67,TRUE,FALSE)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "G6": {
+                  "value": "Is the device in the room:",
+                  "type": "string"
+                },
+                "K6": {
+                  "formula": "IF(AND(Sheet2!E7,K5),TRUE,FALSE)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "A7": {
+                  "formula": "READ(INBOXDATA(,,\"app\",\"dev\",\"blescan\",\"iblist\",\"00000000\",\"mac\"),B7,\"String\",,TRUE)",
+                  "value": "mac",
+                  "type": "undefined"
+                },
+                "B7": {
+                  "value": "ac233f2f8f10",
+                  "type": "string"
+                },
+                "C7": {
+                  "value": "Beacon 10 recognized:",
+                  "type": "string"
+                },
+                "E7": {
+                  "formula": "IF(Sheet2!B7=\"ac233f2f8f10\",TRUE,FALSE)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "A8": {
+                  "formula": "READ(INBOXDATA(,,\"app\",\"dev\",\"blescan\",\"iblist\",\"00000000\",\"rssi\"),B8,\"Number\",,TRUE)",
+                  "value": "rssi",
+                  "type": "undefined"
+                },
+                "B8": {
+                  "value": -46,
+                  "type": "number"
+                },
+                "C8": {
+                  "value": "Aggregate rssi for plot:",
+                  "type": "string"
+                },
+                "E8": {
+                  "formula": "IF(Sheet2!E7,TIMEAGGREGATE(Sheet2!B8,30),\"Waiting for Beacon\")",
+                  "value": -46,
+                  "type": "undefined"
+                },
+                "F8": {
+                  "value": "",
+                  "type": "string"
+                },
+                "G8": {
+                  "value": "Flags:",
+                  "type": "string"
+                },
+                "G10": {
+                  "value": "Already in the room:",
+                  "type": "string"
+                },
+                "K10": {
+                  "value": false,
+                  "type": "bool"
+                },
+                "G11": {
+                  "value": "Already outside the room:",
+                  "type": "string"
+                },
+                "K11": {
+                  "value": true,
+                  "type": "bool"
+                },
+                "G12": {
+                  "value": "Wants to clean the room:",
+                  "type": "string"
+                },
+                "K12": {
+                  "value": true,
+                  "type": "bool"
+                },
+                "A13": {
+                  "value": "MQTT Messages:",
+                  "type": "string"
+                },
+                "G13": {
+                  "value": "Room cleaned:",
+                  "type": "string"
+                },
+                "K13": {
+                  "value": true,
+                  "type": "bool"
+                },
+                "M14": {
+                  "formula": "READ(INBOXDATA(,,\"app\",\"cleaning_demo\",\"b1yes\"),N14,\"Bool\",,TRUE)",
+                  "value": "b1yes",
+                  "type": "undefined"
+                },
+                "N14": {
+                  "value": "#NA!",
+                  "type": "string"
+                },
+                "IF15": {
+                  "formula": "IF(AND(Sheet2!K6==TRUE,Sheet2!K10==FALSE),TRUE,FALSE)",
+                  "value": false,
+                  "type": "undefined"
+                },
+                "A15": {
+                  "value": "Device gets close to room:",
+                  "type": "string"
+                },
+                "C15": {
+                  "value": "Set Flags:",
+                  "type": "string"
+                },
+                "D15": {
+                  "formula": "VALUE.SET(TRUE,TRUE,Sheet2!K10)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "E15": {
+                  "formula": "VALUE.SET(TRUE,FALSE,Sheet2!K11)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "F15": {
+                  "value": "Ask to include room if not already clean:",
+                  "type": "string"
+                },
+                "J15": {
+                  "formula": "IF(Sheet2!K13,\"Already cleaned\",MQTT.PUBLISH(MQTT_Connection!,Sheet2!A24:B32,\"ife-int/device/msgs-down/58bf25044fe8\"))",
+                  "value": "Already cleaned",
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "M16": {
+                  "formula": "READ(INBOXDATA(,,\"app\",\"cleaning_demo\",\"b3yes\"),N16,\"Bool\",,TRUE)",
+                  "value": "b3yes",
+                  "type": "undefined"
+                },
+                "N16": {
+                  "value": "#NA!",
+                  "type": "string"
+                },
+                "IF17": {
+                  "formula": "IF(AND(Sheet2!K6==FALSE,Sheet2!K11==FALSE),TRUE,FALSE)",
+                  "value": false,
+                  "type": "undefined"
+                },
+                "A17": {
+                  "value": "Device leaves proximity of room:",
+                  "type": "string"
+                },
+                "C17": {
+                  "value": "Set Flags:",
+                  "type": "string"
+                },
+                "D17": {
+                  "formula": "VALUE.SET(TRUE,FALSE,Sheet2!K10)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "E17": {
+                  "formula": "VALUE.SET(TRUE,TRUE,Sheet2!K11)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "F17": {
+                  "value": "Ask if finished cleaning, if agreed to clean: ",
+                  "type": "string"
+                },
+                "J17": {
+                  "formula": "IF(AND(Sheet2!K12==TRUE,Sheet2!K13==FALSE),MQTT.PUBLISH(MQTT_Connection!,Sheet2!E24:F32,\"ife-int/device/msgs-down/58bf25044fe8\"),\"No\")",
+                  "value": true,
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "IF19": {
+                  "formula": "Sheet2!N14",
+                  "value": "#NA!",
+                  "type": "reference"
+                },
+                "A19": {
+                  "value": "Activates if b1yes is pressed:",
+                  "type": "string"
+                },
+                "C19": {
+                  "value": "Set wants to clean room true:",
+                  "type": "string"
+                },
+                "E19": {
+                  "formula": "VALUE.SET(TRUE,TRUE,Sheet2!K12)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "F19": {
+                  "value": "Make device display page 2:",
+                  "type": "string"
+                },
+                "J19": {
+                  "formula": "MQTT.PUBLISH(MQTT_Connection!,Sheet2!C24:D29,\"ife-int/device/msgs-down/58bf25044fe8\")",
+                  "value": true,
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "IF21": {
+                  "formula": "Sheet2!N16",
+                  "value": "#NA!",
+                  "type": "reference"
+                },
+                "A21": {
+                  "value": "Activates if b3yes is pressed:",
+                  "type": "string"
+                },
+                "C21": {
+                  "value": "Mark room as cleaned:",
+                  "type": "string"
+                },
+                "E21": {
+                  "formula": "VALUE.SET(TRUE,TRUE,Sheet2!K13)",
+                  "value": true,
+                  "type": "undefined"
+                },
+                "F21": {
+                  "value": "Make device display page 2:",
+                  "type": "string"
+                },
+                "J21": {
+                  "formula": "MQTT.PUBLISH(MQTT_Connection!,Sheet2!C24:D29,\"ife-int/device/msgs-down/58bf25044fe8\")",
+                  "value": true,
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "A24": {
+                  "value": "app",
+                  "type": "string"
+                },
+                "C24": {
+                  "value": "app",
+                  "type": "string"
+                },
+                "E24": {
+                  "value": "app",
+                  "type": "string"
+                },
+                "G24": {
+                  "value": "app",
+                  "type": "string"
+                },
+                "A25": {
+                  "value": "cleaning_demo",
+                  "type": "string"
+                },
+                "C25": {
+                  "value": "cleaning_demo",
+                  "type": "string"
+                },
+                "E25": {
+                  "value": "cleaning_demo",
+                  "type": "string"
+                },
+                "G25": {
+                  "value": "cleaning_demo",
+                  "type": "string"
+                },
+                "A26": {
+                  "value": "actions",
+                  "type": "string"
+                },
+                "C26": {
+                  "value": "actions",
+                  "type": "string"
+                },
+                "E26": {
+                  "value": "actions",
+                  "type": "string"
+                },
+                "G26": {
+                  "value": "actions",
+                  "type": "string"
+                },
+                "A27": {
+                  "value": "0",
+                  "type": "string"
+                },
+                "C27": {
+                  "value": "0",
+                  "type": "string"
+                },
+                "E27": {
+                  "value": "0",
+                  "type": "string"
+                },
+                "G27": {
+                  "value": "0",
+                  "type": "string"
+                },
+                "A28": {
+                  "value": "a",
+                  "type": "string"
+                },
+                "B28": {
+                  "value": "gotoPage",
+                  "type": "string"
+                },
+                "C28": {
+                  "value": "a",
+                  "type": "string"
+                },
+                "D28": {
+                  "value": "gotoPage",
+                  "type": "string"
+                },
+                "E28": {
+                  "value": "a",
+                  "type": "string"
+                },
+                "F28": {
+                  "value": "gotoPage",
+                  "type": "string"
+                },
+                "G28": {
+                  "value": "a",
+                  "type": "string"
+                },
+                "H28": {
+                  "value": "gotoPage",
+                  "type": "string"
+                },
+                "A29": {
+                  "value": "p",
+                  "type": "string"
+                },
+                "B29": {
+                  "value": "1",
+                  "type": "string"
+                },
+                "C29": {
+                  "value": "p",
+                  "type": "string"
+                },
+                "D29": {
+                  "value": "2",
+                  "type": "string"
+                },
+                "E29": {
+                  "value": "p",
+                  "type": "string"
+                },
+                "F29": {
+                  "value": "3",
+                  "type": "string"
+                },
+                "G29": {
+                  "value": "p",
+                  "type": "string"
+                },
+                "H29": {
+                  "value": "4",
+                  "type": "string"
+                },
+                "A30": {
+                  "value": "dev",
+                  "type": "string"
+                },
+                "E30": {
+                  "value": "dev",
+                  "type": "string"
+                },
+                "G30": {
+                  "value": "dev",
+                  "type": "string"
+                },
+                "A31": {
+                  "value": "vibration",
+                  "type": "string"
+                },
+                "E31": {
+                  "value": "vibration",
+                  "type": "string"
+                },
+                "G31": {
+                  "value": "vibration",
+                  "type": "string"
+                },
+                "A32": {
+                  "value": "song",
+                  "type": "string"
+                },
+                "B32": {
+                  "value": "V10S01V10S01V10S01V10",
+                  "type": "string"
+                },
+                "E32": {
+                  "value": "song",
+                  "type": "string"
+                },
+                "F32": {
+                  "value": "V10S01V10S01V10S01V10",
+                  "type": "string"
+                },
+                "G32": {
+                  "value": "song",
+                  "type": "string"
+                },
+                "H32": {
+                  "value": "V10S01V10S01V10S01V10",
+                  "type": "string"
+                }
+              },
+              "namedCells": {},
+              "shapes": {
+                "shapes": [
+                  {
+                    "id": 313650902191,
+                    "itemType": "streamchart",
+                    "x": {
+                      "v": "30875.66666666666"
+                    },
+                    "y": {
+                      "v": "3376.2500000000273"
+                    },
+                    "localX": {
+                      "f": "WIDTH*0.5",
+                      "v": "4193.5"
+                    },
+                    "localY": {
+                      "f": "HEIGHT*0.5",
+                      "v": "2765"
+                    },
+                    "width": {
+                      "v": "8387"
+                    },
+                    "height": {
+                      "v": "5530"
+                    },
+                    "parent": -10,
+                    "name": {
+                      "v": "Streamchart2",
+                      "t": "s"
+                    },
+                    "shape": {
+                      "type": "rectangle"
+                    },
+                    "format": {
+                      "linecolor": {
+                        "v": "#AAAAAA",
+                        "t": "s"
+                      }
+                    },
+                    "attributes": {
+                      "container": {
+                        "v": "false",
+                        "t": "b"
+                      },
+                      "portmode": {
+                        "v": "0"
+                      }
+                    },
+                    "chart": {
+                      "o-chart": {
+                        "type": "scatterlinemarker",
+                        "template": "basic",
+                        "o-formula": {
+                          "f": "Sheet2!E8",
+                          "v": "0",
+                          "msc": true,
+                          "sv": -46,
+                          "ref": "Sheet2!E8"
+                        },
+                        "o-shapes": {
+                          "v": "",
+                          "t": "s"
+                        },
+                        "o-hilolines": {
+                          "visible": "0"
+                        },
+                        "o-serieslines": {
+                          "visible": "0"
+                        },
+                        "o-upbars": {
+                          "visible": "0"
+                        },
+                        "o-downbars": {
+                          "visible": "0"
+                        }
+                      },
+                      "o-plot": {},
+                      "o-title": {
+                        "align": "center",
+                        "visible": "1",
+                        "o-formula": {
+                          "v": "signal%20strenght%20of%20beacon%2010",
+                          "t": "s",
+                          "msc": true
+                        }
+                      },
+                      "a-series": [
+                        {
+                          "type": "scatter",
+                          "timeseries": "1",
+                          "bargap": "0.3",
+                          "o-fxlabel": {
+                            "v": "time",
+                            "t": "s",
+                            "msc": true
+                          },
+                          "o-fylabel": {
+                            "v": "value",
+                            "t": "s",
+                            "msc": true
+                          },
+                          "o-ftime": {
+                            "f": "Sheet2!E8",
+                            "v": "0",
+                            "msc": true,
+                            "sv": -46,
+                            "ref": "Sheet2!E8"
+                          },
+                          "o-ftimexkey": {
+                            "v": "time",
+                            "t": "s",
+                            "msc": true
+                          },
+                          "o-ftimeykey": {
+                            "v": "value",
+                            "t": "s",
+                            "msc": true
+                          },
+                          "o-formula": {
+                            "f": "",
+                            "v": "",
+                            "t": "s",
+                            "msc": true,
+                            "sv": ""
+                          },
+                          "o-marker": {
+                            "style": "rect"
+                          },
+                          "o-datalabel": {
+                            "position": "above",
+                            "o-format": {
+                              "o-font": {
+                                "linknumberformat": "1"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "a-xaxis": [
+                        {
+                          "align": "bottom",
+                          "type": "time",
+                          "name": "XAxis1",
+                          "position": "993.8888720671337 4786.041666666667 6035.684024413427 5330",
+                          "o-formula": {
+                            "f": "AXIS(,,,)",
+                            "v": "0",
+                            "msc": true,
+                            "sv": true
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "linknumberformat": "0"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "a-yaxis": [
+                        {
+                          "align": "left",
+                          "type": "linear",
+                          "name": "YAxis1",
+                          "position": "300 1308.5416666666665 993.8888720671337 4786.041666666667",
+                          "o-formula": {
+                            "f": "AXIS(-100,-20,)",
+                            "v": "0",
+                            "msc": true,
+                            "sv": true
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "linknumberformat": "1"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "o-legend": {
+                        "visible": "1",
+                        "align": "middleright",
+                        "o-formula": {
+                          "f": "",
+                          "v": "",
+                          "t": "s",
+                          "msc": true,
+                          "sv": ""
+                        },
+                        "o-formulatitle": {
+                          "v": "rssi",
+                          "t": "s",
+                          "msc": true
+                        }
+                      }
+                    }
+                  }
+                ],
+                "timestamp": 0,
+                "version": 1,
+                "changed": 867976789626
+              },
+              "properties": {
+                "cols": [
+                  {
+                    "ref": {
+                      "col": "B"
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 3322.9166666666697,
+                        "visible": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C"
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 3217.083333333332,
+                        "visible": true
+                      }
+                    }
+                  }
+                ],
+                "rows": [
+                  {
+                    "ref": {
+                      "row": 2
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 326.25697135925293,
+                        "visible": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "row": 3
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 923.3333333333333,
+                        "visible": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "row": 12
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 500,
+                        "visible": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "row": 13
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 711.6662629445391,
+                        "visible": true
+                      }
+                    }
+                  }
+                ],
+                "cells": [
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 3
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 24,
+                        "fontstyle": 1
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 3
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 14
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 4
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 24,
+                        "fontstyle": 1
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 5
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 14
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 8
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 14
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 13
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 18,
+                        "fontstyle": 1
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 24
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 25
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 26
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 27
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 28
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "C",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "D",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 4,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 29
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 1,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 30
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 2,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 31
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "B",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "F",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "G",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "level": 3,
+                        "key": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "H",
+                      "row": 32
+                    },
+                    "properties": {
+                      "attributes": {
+                        "key": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "settings": {
+                "maxchars": 1000,
+                "minrow": 1,
+                "maxrow": 100,
+                "mincol": -2,
+                "maxcol": 50,
+                "protected": false
+              }
+            },
+            "trigger": {
+              "type": "arrival",
+              "repeat": "once"
+            },
+            "settings": {
+              "maximize": false,
+              "showGrid": true,
+              "showHeader": true,
+              "showInbox": true,
+              "showFormulas": false,
+              "greyIfRows": true,
+              "hideMessages": false
+            },
+            "custom": {
+              "jsg": {
+                "pin": {
+                  "p": {
+                    "x": {
+                      "v": "10500"
+                    },
+                    "y": {
+                      "v": "6500"
+                    }
+                  },
+                  "lp": {
+                    "x": {
+                      "f": "!WIDTH*0.5",
+                      "v": "10500"
+                    },
+                    "y": {
+                      "f": "!HEIGHT*0.5",
+                      "v": "6500"
+                    }
+                  }
+                },
+                "type": "sheet",
+                "inboxcontainer": {
+                  "split": 5000,
+                  "width": 7989.791666666667
+                }
+              }
+            }
+          },
+          {
+            "id": "B1lTrH_dXJg",
+            "name": "Sheet3",
+            "loop": {
+              "path": "",
+              "enabled": false,
+              "recursively": false
+            },
+            "inbox": {
+              "max": 20,
+              "type": "Inbox",
+              "id": "BkZTrr__myx",
+              "stream": null
+            },
+            "sheet": {
+              "cells": {
+                "A3": {
+                  "value": "Timer Logic:",
+                  "type": "string"
+                },
+                "A5": {
+                  "value": "Timer Flag, so it only plays it once:",
+                  "type": "string"
+                },
+                "E5": {
+                  "value": "Already sent:",
+                  "type": "string"
+                },
+                "F5": {
+                  "value": false,
+                  "type": "bool"
+                },
+                "A7": {
+                  "value": "Timer resets when entering proximity of room:",
+                  "type": "string"
+                },
+                "E7": {
+                  "value": "Timer:",
+                  "type": "string"
+                },
+                "F7": {
+                  "formula": "COUNTER(0,1,300,OR(Sheet2!K6,Sheet3!F5))",
+                  "value": 0,
+                  "type": "undefined"
+                },
+                "A9": {
+                  "value": "If Timer hits 300 (5 mins) send page 4:",
+                  "type": "string"
+                },
+                "E9": {
+                  "formula": "IF(AND(Sheet3!F7>=300,Sheet3!F5==FALSE),MQTT.PUBLISH(MQTT_Connection!,Sheet3!G24:H32,\"ife-int/device/msgs-down/58bf25044fe8\"),FALSE)",
+                  "value": false,
+                  "type": "undefined",
+                  "references": [
+                    "MQTT_Connection!"
+                  ]
+                },
+                "A11": {
+                  "value": "Ajust Flag so it only sends a MQTT message once:",
+                  "type": "string"
+                },
+                "C11": {
+                  "value": "",
+                  "type": "string"
+                },
+                "E11": {
+                  "formula": "VALUE.SET(Sheet3!F5,FALSE,Sheet3!F5)",
+                  "value": false,
+                  "type": "undefined"
+                },
+                "F11": {
+                  "formula": "VALUE.SET(Sheet3!E9,TRUE,Sheet3!F5)",
+                  "value": false,
+                  "type": "undefined"
+                }
+              },
+              "namedCells": {},
+              "shapes": {
+                "shapes": [],
+                "timestamp": 0,
+                "version": 1,
+                "changed": 156570447345
+              },
+              "properties": {
+                "cols": [
+                  {
+                    "ref": {
+                      "col": "B"
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 3772.708333333332,
+                        "visible": true
+                      }
+                    }
+                  },
+                  {
+                    "ref": {
+                      "col": "E"
+                    },
+                    "properties": {
+                      "attributes": {
+                        "size": 2185.208333333332,
+                        "visible": true
+                      }
+                    }
+                  }
+                ],
+                "rows": [],
+                "cells": [
+                  {
+                    "ref": {
+                      "col": "A",
+                      "row": 3
+                    },
+                    "properties": {
+                      "textFormats": {
+                        "fontsize": 24
+                      }
+                    }
+                  }
+                ]
+              },
+              "settings": {
+                "maxchars": 1000,
+                "minrow": 1,
+                "maxrow": 100,
+                "mincol": -2,
+                "maxcol": 50,
+                "protected": false
+              }
+            },
+            "trigger": {
+              "type": "interval",
+              "repeat": "once",
+              "interval": 1,
+              "intervalUnit": "s",
+              "useDefaultInterval": false
+            },
+            "settings": {
+              "maximize": false,
+              "showGrid": true,
+              "showHeader": true,
+              "showInbox": true,
+              "showFormulas": false,
+              "greyIfRows": true,
+              "hideMessages": false
+            },
+            "custom": {
+              "jsg": {
+                "pin": {
+                  "p": {
+                    "x": {
+                      "v": "10500"
+                    },
+                    "y": {
+                      "v": "6500"
+                    }
+                  },
+                  "lp": {
+                    "x": {
+                      "f": "!WIDTH*0.5",
+                      "v": "10500"
+                    },
+                    "y": {
+                      "f": "!HEIGHT*0.5",
+                      "v": "6500"
+                    }
+                  }
+                },
+                "type": "sheet"
+              }
+            }
+          }
+        ],
+        "settings": {
+          "view": {
+            "maximize": "SJrD2IOXke",
+            "showInbox": false,
+            "showGrid": false,
+            "showHeader": false,
+            "showOutbox": false,
+            "allowZoom": false,
+            "allowScroll": true
+          },
+          "locale": "en",
+          "isOPCUA": false,
+          "defaultInterval": 1000,
+          "showOutbox": false,
+          "description": "",
+          "backgroundColor": "default",
+          "theme": "default",
+          "tour": {},
+          "image": "",
+          "categories": []
+        },
+        "extensionSettings": {},
+        "custom": {},
+        "className": "Machine",
+        "scope": {
+          "id": "Sk0c3sjJi"
+        },
+        "namedCells": {},
+        "integrations": []
+      },
+      "connections": []
+    }
+  ]
+}

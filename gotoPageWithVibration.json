@@ -1,0 +1,16 @@
+{
+  "app": {
+    "cleaning_demo": {
+      "actions": [
+        {
+          "a": "gotoPage",
+          "p": "4"
+        }
+      ]
+    }, "dev": {
+      "vibration": {
+        "song":"V10S01V10S01V10S01V10"
+      }
+    }
+  }
+}

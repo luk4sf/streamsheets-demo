@@ -1,0 +1,268 @@
+{
+  "displayIcon": "ic_access_time_black_24dp",
+  "displayName": "Cleaning Demo",
+  "target_size": {
+    "w": 480,
+    "h": 600
+  },
+  "infopages": [
+    {
+      "displayName": "Page 1",
+      "id": "1",
+      "infowidgets": [
+        {
+          "name": "1731664710997",
+          "interaction": "dynamic",
+          "region": {
+            "h": 408,
+            "w": 470,
+            "x": 10,
+            "y": 42
+          },
+          "value": "Would you be able to incorporate Room X into your route?",
+          "format": "text",
+          "formatter": {
+            "autobreak": true,
+            "font": {
+              "sz": "52",
+              "weight": "bold"
+            },
+            "halign": "center",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          }
+        },
+        {
+          "name": "b1no",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 330,
+            "y": 460
+          },
+          "value": "button_cancel_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "updateRemote"
+        },
+        {
+          "name": "b1yes",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 10,
+            "y": 460
+          },
+          "value": "button_ok_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "updateRemote"
+        }
+      ]
+    },
+    {
+      "displayName": "Page 2",
+      "id": "2",
+      "infowidgets": [
+        {
+          "name": "1731664815625",
+          "interaction": "static",
+          "region": {
+            "h": 408,
+            "w": 470,
+            "x": 10,
+            "y": 42
+          },
+          "value": "Thank you! Your help is greatly appreciated.",
+          "format": "text",
+          "formatter": {
+            "autobreak": true,
+            "font": {
+              "sz": "52",
+              "weight": "bold"
+            },
+            "halign": "left",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          }
+        },
+        {
+          "name": "1731664833094",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 330,
+            "y": 460
+          },
+          "value": "button_back_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "gotoPage",
+          "target": "home.1.UP"
+        }
+      ]
+    },
+    {
+      "displayName": "Page 3",
+      "id": "3",
+      "infowidgets": [
+        {
+          "name": "1731664909682",
+          "interaction": "dynamic",
+          "region": {
+            "h": 408,
+            "w": 470,
+            "x": 10,
+            "y": 42
+          },
+          "value": "Have you finished in Room X? Should it be marked as clean?",
+          "format": "text",
+          "formatter": {
+            "autobreak": true,
+            "font": {
+              "sz": "52",
+              "weight": "bold"
+            },
+            "halign": "left",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          }
+        },
+        {
+          "name": "b3no",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 330,
+            "y": 460
+          },
+          "value": "button_cancel_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "updateRemote"
+        },
+        {
+          "name": "b3yes",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 10,
+            "y": 460
+          },
+          "value": "button_ok_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "updateRemote"
+        }
+      ]
+    },
+    {
+      "displayName": "Page 4",
+      "id": "4",
+      "infowidgets": [
+        {
+          "name": "1731664980635",
+          "interaction": "dynamic",
+          "region": {
+            "h": 408,
+            "w": 470,
+            "x": 10,
+            "y": 42
+          },
+          "value": "Hey, Room X is still marked as unfinished. Is that correct?",
+          "format": "text",
+          "formatter": {
+            "autobreak": true,
+            "font": {
+              "sz": "52",
+              "weight": "bold"
+            },
+            "halign": "left",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          }
+        },
+        {
+          "name": "b4yes",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 10,
+            "y": 460
+          },
+          "value": "button_ok_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "updateRemote"
+        },
+        {
+          "name": "b4no",
+          "interaction": "button",
+          "region": {
+            "h": 140,
+            "w": 150,
+            "x": 330,
+            "y": 460
+          },
+          "value": "button_cancel_100dp",
+          "format": "graphic",
+          "formatter": {
+            "halign": "center",
+            "name": "basic",
+            "outline": "solid_rounded",
+            "outline_sz": 4,
+            "valign": "center"
+          },
+          "onEntry": "gotoPage",
+          "target": "3"
+        }
+      ]
+    }
+  ]
+}

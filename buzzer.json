@@ -1,0 +1,9 @@
+{
+  "app": {
+    "dev": {
+      "buzzer": {
+        "song":"bb01c-01ab01Ab05Eb10"
+      }
+    }
+  }
+}
