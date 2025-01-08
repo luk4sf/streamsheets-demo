@@ -13,6 +13,6 @@ This project is a demo showcasing the **Infrafon device** in action, using **BLE
 Watch the demonstration video on LinkedIn: [View Video](https://www.linkedin.com/posts/infrafon_ztna-zerotrust-ble-activity-7275930284796088320-MqLY?utm_source=share&utm_medium=member_desktop)  
 
 ## 🛠️ Technologies Used  
-- **Infrafon Device** for staff notifications and interactions.  
+- **[Infrafon Device](https://www.infrafon.com/)** for staff notifications and interactions.  
 - **BLE Beacons** to track room proximity.  
 - **Streamsheets** for MQTT integration and workflow automation.  
